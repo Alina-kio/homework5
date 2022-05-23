@@ -17,8 +17,7 @@ async def go():
 
 
 async def scheduler():
-    # aioschedule.every().day.at('22:17').do(go)
-    aioschedule.every().day.at("22:20").do(go)
+    aioschedule.every().saturday.at("22:20").do(go)
 
     while True:
         await aioschedule.run_pending()
